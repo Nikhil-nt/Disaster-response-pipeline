@@ -31,7 +31,7 @@ def clean_data(df):
 
 def save_data(df, database_filename):
     engine = create_engine('sqlite:///DisasterResponse.db')
-    df.to_sql('dataframe1', engine, index=False)
+    df.to_sql('df1', engine, index=False)
     pass  
 
 
@@ -48,7 +48,7 @@ def main():
         df = clean_data(df)
         
         print('Saving data...\n    DATABASE: {}'.format(database_filepath))
-        save_data(df, database_filepath)
+        save_data(df1, database_filepath)
         
         print('Cleaned data saved to database!')
     
